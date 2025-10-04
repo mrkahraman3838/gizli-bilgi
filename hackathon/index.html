@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HACKATHON</title>
+</head>
+<body>
+    
+</body>
+</html>
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bilgisayarların Yapısı — Eğitimsel Sayfa</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#60a5fa;--glass:rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0; background:linear-gradient(180deg,#071028 0%,#071827 100%); color:#e6eef6}
+    .wrap{max-width:980px;margin:36px auto;padding:24px}
+    header{display:flex;gap:16px;align-items:center}
+    h1{margin:0;font-size:22px}
+    p.lead{margin:6px 0 18px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
+    .card{background:linear-gradient(180deg,var(--card),#071227);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    .section{margin-bottom:14px}
+    .section h2{margin:0 0 8px;font-size:16px}
+    .list{margin:0;padding-left:18px;color:var(--muted)}
+    .chip{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--glass);color:var(--accent);font-weight:600;margin-right:8px}
+    .toggle{display:flex;align-items:center;gap:8px;margin-top:12px}
+    button.small{background:transparent;border:1px solid rgba(96,165,250,0.14);padding:8px 10px;border-radius:8px;color:var(--accent);cursor:pointer}
+    .diagram{display:grid;grid-template-columns:1fr;gap:10px}
+    .block{background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.02)}
+    .code{background:#010417;padding:12px;border-radius:8px;overflow:auto;font-family:monospace;font-size:13px;color:#bcd0ff}
+    .controls{display:flex;gap:8px;flex-wrap:wrap}
+    summary{cursor:pointer}
+    details > summary::-webkit-details-marker{display:none}
+    .footer{margin-top:18px;color:var(--muted);font-size:13px}
+    @media (max-width:880px){.grid{grid-template-columns:1fr}} 
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden>
+        <rect x="2" y="3" width="20" height="14" rx="2" fill="#07263D"></rect>
+        <rect x="6" y="8" width="12" height="6" rx="1" fill="#0B4B7A"></rect>
+        <rect x="3" y="19" width="18" height="2" rx="1" fill="#0B4B7A"></rect>
+      </svg>
+      <div>
+        <h1>Bilgisayarların Yapısı — Kısa ve Anlaşılır (Kodlu Sayfa)</h1>
+        <p class="lead">Bu tek dosyalık HTML sayfası Visual Studio Code içinde açılmak üzere hazırlanmıştır. İçerik: Donanım, yazılım ve çalışma prensipleri.</p>
+      </div>
+    </header>
+
+    <main class="grid" role="main">
+      <section class="card" aria-labelledby="main-title">
+        <div class="section">
+          <h2 id="main-title">1. Genel Bakış</h2>
+          <p class="list">Bilgisayarlar iki ana parçadan oluşur: <strong>Donanım (hardware)</strong> ve <strong>Yazılım (software)</strong>. Bu sayfa, her bir bileşeni kısa ve görselle desteklenmiş şekilde açıklar.</p>
+        </div>
+
+        <div class="section">
+          <h2>2. Donanım (Hardware)</h2>
+          <ul class="list">
+            <li><strong>CPU (İşlemci):</strong> Hesaplamaları yapar; komut döngüsünü yönetir.</li>
+            <li><strong>RAM (Bellek):</strong> Geçici veri depolama; çalışırken programlar burada tutulur.</li>
+            <li><strong>Depolama (SSD/HDD):</strong> Kalıcı veri depolama.</li>
+            <li><strong>Anakart:</strong> Parçaları birbirine bağlayan kart; veri yolu ve güç dağılımı sağlar.</li>
+            <li><strong>G/Ç Birimleri:</strong> Klavye, fare, ekran, ağ kartı, USB cihazları gibi giriş-çıkış elemanları.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>3. Yazılım (Software)</h2>
+          <ul class="list">
+            <li><strong>İşletim Sistemi (OS):</strong> Donanımı yönetir ve uygulama çalıştırma ortamı sağlar (Windows, Linux, macOS).</li>
+            <li><strong>Sürücüler (Drivers):</strong> Donanım ile işletim sistemi arasındaki köprüdür.</li>
+            <li><strong>Uygulamalar:</strong> Kullanıcıya hizmet eden yazılımlar (tarayıcı, ofis, oyunlar).</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>4. Çalışma Prensibi — Giriş → İşlem → Çıkış</h2>
+          <p class="list">Basit akış: kullanıcı bir komut verir (giriş), CPU komutu işler (işlem), sonuç görüntülenir veya saklanır (çıkış).</p>
+
+          <details>
+            <summary class="chip">Akışı Görselleştir</summary>
+            <div class="diagram" style="margin-top:10px">
+              <div class="block"><strong>1. Giriş</strong><div class="list">Klavye, fare, sensör veya ağ üzerinden veri.</div></div>
+              <div class="block"><strong>2. Bellek & CPU</strong><div class="list">Veri RAM'e yüklenir → CPU talimatları okur ve işler.</div></div>
+              <div class="block"><strong>3. Depolama & Çıkış</strong><div class="list">Sonuç kaydedilir veya ekranda gösterilir; çıkış cihazlarına gönderilir.</div></div>
+            </div>
+          </details>
+        </div>
+
+        <div class="section">
+          <h2>5. Örnek Kod — Basit CPU Döngüsü (Simülasyon)</h2>
+          <p class="list">Aşağıdaki JavaScript, çok basit bir komut işleme döngüsünü simüle eder. VS Code'da bir .html dosyasına yapıştırıp çalıştırabilirsiniz.</p>
+          <pre class="code" id="sampleCode">// Basit CPU döngüsü simülasyonu
+const memory = [
+  {op: 'LOAD', value: 5},
+  {op: 'ADD', value: 10},
+  {op: 'STORE', addr: 0},
+  {op: 'HALT'}
+];
+
+let acc = 0; // accumulator
+let pc = 0;  // program counter
+
+function step() {
+  const instr = memory[pc];
+  if (!instr || instr.op === 'HALT') return false;
+  switch(instr.op) {
+    case 'LOAD': acc = instr.value; break;
+    case 'ADD': acc += instr.value; break;
+    case 'STORE': memory[instr.addr] = {value: acc}; break;
+  }
+  pc++;
+  return true;
+}
+
+while(step()){}
+console.log('Çalışma bitti. Accumulator =', acc);
+</pre>
+
+          <div class="controls">
+            <button class="small" id="copyBtn">Kodu Kopyala</button>
+            <button class="small" id="runBtn">Tarayıcı Konsolunda Çalıştır</button>
+          </div>
+        </div>
+
+        <div class="footer">Bu dosyayı Visual Studio Code içinde açıp düzenleyebilirsiniz. İsterseniz açıklamaları genişletip eğitim amaçlı slayt hâline dönüştürebilirim.</div>
+      </section>
+
+      <aside class="card" aria-labelledby="aside-title">
+        <h2 id="aside-title">Hızlı Kısa Bilgiler</h2>
+        <p class="list"><span class="chip">IPUCU</span> CPU ve RAM arasındaki fark: CPU işlem yapar; RAM veriyi kısa süreli saklar.</p>
+
+        <section class="section">
+          <h2>Dosya Yapısı Önerisi (VS Code)</h2>
+          <ul class="list">
+            <li>README.md — Konu özeti</li>
+            <li>index.html — Bu sayfa</li>
+            <li>assets/ — görseller ve SVG'ler</li>
+            <li>examples/ — küçük simülasyon dosyaları (cpu-sim.js vb.)</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>Kısaltmalar</h2>
+          <ul class="list">
+            <li>CPU: Central Processing Unit</li>
+            <li>RAM: Random Access Memory</li>
+            <li>SSD: Solid State Drive</li>
+            <li>OS: Operating System</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>Hızlı İşlem</h2>
+          <p class="list">Aşağıdaki düğme kodu panoya kopyalar veya konsolda çalıştırılmak üzere hazırlar.</p>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <script>
+    // Kopyala butonu
+    document.getElementById('copyBtn').addEventListener('click', async () => {
+      const code = document.getElementById('sampleCode').innerText;
+      try {
+        await navigator.clipboard.writeText(code);
+        alert('Kod panoya kopyalandı!');
+      } catch(e) {
+        alert('Kopyalama başarısız — tarayıcı izinleri olabilir.');
+      }
+    });
+
+    // Run butonu - kullanıcıyı konsola yönlendirir ve kodu çalıştırılmak üzere gösterir
+    document.getElementById('runBtn').addEventListener('click', () => {
+      const code = document.getElementById('sampleCode').innerText;
+      console.clear();
+      try {
+        // eslint-disable-next-line no-eval
+        eval(code);
+        alert('Kod çalıştırıldı — konsolu kontrol edin (F12).');
+      } catch(err) {
+        alert('Çalıştırma hatası: ' + err.message);
+      }
+    });
+  </script>
+</body>
+</html>
